@@ -129,10 +129,11 @@ func rainbow#show()
 	if exists('b:rainbow_loaded')
 		let b:rainbow_visible = 1
 		for id in range(b:rainbow_loaded)
+			let cterm = b:rainbow_conf.cterm
 			let ctermfg = b:rainbow_conf.ctermfgs[id % len(b:rainbow_conf.ctermfgs)]
 			let guifg = b:rainbow_conf.guifgs[id % len(b:rainbow_conf.guifgs)]
-			exe 'hi rainbow_p'.id.' ctermfg='.ctermfg.' guifg='.guifg
-			exe 'hi rainbow_o'.id.' ctermfg='.ctermfg.' guifg='.guifg
+			exe 'hi rainbow_p'.id.' cterm='.cterm.' ctermfg='.ctermfg.' guifg='.guifg
+			exe 'hi rainbow_o'.id.' cterm='.cterm.' ctermfg='.ctermfg.' guifg='.guifg
 		endfor
 	endif
 endfunc
