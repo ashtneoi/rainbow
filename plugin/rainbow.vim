@@ -23,6 +23,7 @@ endif
 let s:loaded = 1
 
 let s:rainbow_conf = {
+\	'cterm': 'NONE',
 \	'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
 \	'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
 \	'operators': '_,_',
